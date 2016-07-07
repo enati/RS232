@@ -17,11 +17,11 @@
 
             <!-- Modal Body -->
             <div class="modal-body row">
-                <form role="form" id="configForm" action="ConfigClass.post" data-bind="true">>
+                <form role="form" id="configForm" action="ConfigClass.post" data-bind="true">
                     <div class="form-group col-sm-4">
                         <label class="control-label" for="portName">Puerto</label>
-                        <select id="portName" class="form-control">
-                            <option value="COM1">COM1</option>
+                        <select id="portName" name="portName" class="form-control">
+                            <option value="COM1" selected>COM1</option>
                             <option value="COM2">COM2</option>
                             <option value="COM3">COM3</option>
                             <option value="COM4">COM4</option>
@@ -33,8 +33,8 @@
                     </div>
                     <div class="form-group col-sm-4">
                         <label class="control-label" for="bauds">Baudios</label>
-                        <select id="bauds" class="form-control">
-                            <option value="1200">1200</option>
+                        <select id="bauds" name="bauds" class="form-control">
+                            <option value="1200" selected>1200</option>
                             <option value="2400">2400</option>
                             <option value="4800">4800</option>
                             <option value="9600">9600</option>
@@ -47,8 +47,8 @@
                     <div class="form-group col-sm-4">
                         <div class="form-group">
                             <label class="control-label" for="parity">Paridad</label>
-                            <select id="parity" class="form-control">
-                                <option value="n">N-Ninguna</option>
+                            <select id="parity" name="parity" class="form-control">
+                                <option value="n" selected>N-Ninguna</option>
                                 <option value="E">E-Par</option>
                                 <option value="O">O-Impar</option>
                                 <option value="M">M-Marca</option>

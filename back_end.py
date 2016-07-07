@@ -3,6 +3,8 @@ import htmlPy
 import json
 #from main import app as htmlPy_app
 
+port = None
+
 
 class HomeClass(htmlPy.Object):
     # GUI callable functions have to be inside a class.
@@ -61,7 +63,14 @@ class ConfigClass(htmlPy.Object):
         # @htmlPy.Slot(arg1_type, arg2_type, ..., result=return_type)
         # This function can be used for GUI forms.
         #
+        # json_data = {"portName":"COM1","bauds":"1200","parity":"n","handShake":"on","numBits":"on","stopBits":"on"}
         import pdb; pdb.set_trace()
+        portName = json_data['portName']
+        bauds = json_data['bauds']
+        parity = json_data['parity']
+        handShake = json_data['handShake']
+        numBits = json_data['numBits']
+        stopBits = json_data['stopBits']
         print "Form function name"
         form_data = json.loads(json_data)
         return json.dumps(form_data)
