@@ -1,0 +1,112 @@
+<!-- Modal -->
+<div class="modal fade" id="configModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close"
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Configuración
+                </h4>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body row">
+                <form role="form" id="configForm" action="ConfigClass.post" data-bind="true">>
+                    <div class="form-group col-sm-4">
+                        <label class="control-label" for="portName">Puerto</label>
+                        <select id="portName" class="form-control">
+                            <option value="COM1">COM1</option>
+                            <option value="COM2">COM2</option>
+                            <option value="COM3">COM3</option>
+                            <option value="COM4">COM4</option>
+                            <option value="COM5">COM5</option>
+                            <option value="COM6">COM6</option>
+                            <option value="COM7">COM7</option>
+                            <option value="COM8">COM8</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label class="control-label" for="bauds">Baudios</label>
+                        <select id="bauds" class="form-control">
+                            <option value="1200">1200</option>
+                            <option value="2400">2400</option>
+                            <option value="4800">4800</option>
+                            <option value="9600">9600</option>
+                            <option value="19200">19200</option>
+                            <option value="38400">38400</option>
+                            <option value="57600">57600</option>
+                            <option value="115200">115200</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="parity">Paridad</label>
+                            <select id="parity" class="form-control">
+                                <option value="n">N-Ninguna</option>
+                                <option value="E">E-Par</option>
+                                <option value="O">O-Impar</option>
+                                <option value="M">M-Marca</option>
+                                <option value="S">S-Espacio</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-4" style="text-align:left">
+                        <label class="control-label" for="handShake">HandShake
+                        </label></br>
+                        <div class="btn-group" data-toggle="buttons" id="handShake">
+                            <label class="active">
+                                <input type="checkbox" name="handShake" id="handShake1" autocomplete="off" checked> Sin
+                            </label></br>
+                            <label>
+                                <input type="checkbox" name="handShake" id="handShake2" autocomplete="off"> XOn/XOff
+                            </label></br>
+                            <label>
+                                <input type="checkbox" name="handShake" id="handShake3" autocomplete="off"> RTS
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <label class="control-label" for="numBits">Bits por Car</label></br>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="active">
+                                <input type="checkbox" name="numBits" id="numBits1" autocomplete="off" checked> 7
+                            </label></br>
+                            <label>
+                                <input type="checkbox" name="numBits" id="numBits2" autocomplete="off"> 8
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <div class="form-group">
+                            <label class="control-label" for="stopBits">Bits Stop</label></br>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="active">
+                                    <input type="checkbox" name="stopBits" id="stopBits1" autocomplete="off" checked> 1
+                                </label></br>
+                                <label>
+                                    <input type="checkbox" name="stopBits" id="stopBits2" autocomplete="off"> 2
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">
+                            Close
+                </button>
+                <button type="submit" class="btn btn-primary" form="configForm">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>

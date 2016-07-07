@@ -1,0 +1,41 @@
+<form>
+    <div class="form-group">
+        <label for="stringInput"></label>
+        <input type="text" class="form-control" id="stringInput">
+    </div>
+</form>
+<form>
+    <div class="form-group">
+        <label for="txInput"></label>
+        <textarea id="txInput" class="form-control" rows="10"></textarea>
+    </div>
+</form>
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#raw" data-toggle="tab">RAW</a></li>
+    <li><a href="#sync" data-toggle="tab">SYNC</a></li>
+</ul>
+<div class="tab-content">
+    <div style="float:right; padding: 15px">
+        <ul class="nav nav-pills">
+            <li data-toggle="pill" class="btn btn-default active">HEX</li>
+            <li data-toggle="pill" class="btn btn-default">ASCII</li>
+            <li data-toggle="pill" class="btn btn-default">HYB</li>
+        </ul>
+    </div>
+    <div class="tab-pane active" id="raw">
+        <textarea class="form-control" rows="10" readonly></textarea>
+    </div>
+    <div class="tab-pane" id="sync">
+        <div style="float:left; padding-top: 15px">
+            <form>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="startStr">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" class="form-control" id="endStr">
+                </div>
+            </form>
+        </div>
+        <textarea class="form-control" rows="10" readonly></textarea>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="{{ 'css/bootstrap.min.css'|staticfile }}">
+        <link rel="stylesheet" href="{{ 'css/base.css'|staticfile }}">
+        <script type="text/javascript" src="{{ 'js/jquery-1.10.2.js'|staticfile }}"></script>
+        <script type="text/javascript" src="{{ 'js/bootstrap.min.js'|staticfile }}"></script>
+    </head>
+    <script>
+        $(document).ready(function(){
+
+            var today = new Date();
+            $('#date').text(today.toLocaleDateString());
+            $('#status').text('Desconectado');
+            $('#time').text(today.toLocaleTimeString());
+            setInterval(function() {
+                $('#time').text(new Date().toLocaleTimeString());
+            }, 1000);
+
+            $('#home').click(function() {
+                $(location).reload(true)
+            });
+
+        })
+    </script>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active" title="Home"><a href="#" id="home"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                        <li title="Config">
+                        <a href="#" id="config" data-toggle="modal" data-target="#configModal"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></li>
+                        <li title="Connect"><a href="#" id="connect"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" id="status"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="#" id="date"></a></li>
+                        <li class="divider-vertical"></li>
+                        <li><a href="#" id="time"></a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="container">
+            {% include 'home.html' %}
+        </div>
+        {% include 'config.html' %}
+    </body>
+</html>
